@@ -18,7 +18,8 @@ To use, please see information below...
 1. Personalizing the Script Code and Master Sheet
 
 Create a Master Sheet to hold your images. You will update the sheet images whenever needed and the script will use the one in the sheet.
-The format of the sheet must have Column  
+The format of the sheet must have Column C holding the fileID of the image (assuming it is within Google Drive) and D will be the alt-text for the script to look for.
+The Alt Text must be unique as it is how the script will identify which image to use and replace.
 Replace the placeholder sheet URL with the share link to the sheet you want it to retriever from. 
 
 3. Adding the Image to the Master Sheet
