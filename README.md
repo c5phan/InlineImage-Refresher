@@ -1,5 +1,6 @@
 # InlineImage-Refresher
 Automated Inline Image Refresher for Google Docs using AppScript. It is set up to refresh every time a document opens.
+It will go through every header and body in the doc and replace any images that has the same alt text as any in the google sheet.
 To use, please see information below...
 
 # Guidelines for Usage
@@ -18,12 +19,11 @@ To use, please see information below...
 1. Personalizing the Script Code and Master Sheet
 
 Create a Master Sheet to hold your images. You will update the sheet images whenever needed and the script will use the one in the sheet.
-The format of the sheet must have Column C holding the fileID of the image (assuming it is within Google Drive) and D will be the alt-text for the script to look for.
-The Alt Text must be unique as it is how the script will identify which image to use and replace.
-For the script, replace the placeholder sheet URL with the share link to the sheet you want it to retriever from. 
-You want to also deploy the script as a library (this will give you a Script ID that will be needed later on for set up).
+The format of the sheet must have Column C holding the fileID of the image (assuming it is within Google Drive) and Column D will be the alt-text for the script to look for. The Alt Text must be unique as it is how the script will identify which image to use and replace. I have my sheet set up so A is a thumbnail of the image and B is the URL for easy management purposes.
 
-3. Adding the Image to the Master Sheet
+For the script (AutomatedImageRefresher), add it as an appscript titled AutomatedImageRefresher in your drive. Then, replace the placeholder sheet URL in the code with the share link to the sheet you want it to retriever from. You must deploy the script as a library (this will give you a Script ID that will be needed later on for set up).
+
+3. Adding Images to the Master Sheet
 
 Add the image you want to be refreshed over time to the master sheet. This is what you will update with the new image whenever needed.
 The most important columns are the FileID and ALT Text (the script needs these two cells to update the image)
@@ -41,8 +41,8 @@ Now, click the + beside Libraries and a popup will show up for the Script ID.
 Enter the Script ID into the slot and click Lookup. 
 
 If you see AutomatedImageRefresher, click Add. The Library should now show up.
-Now, we want to set up a trigger so it runs when the doc opens.  Click the clock symbol (Triggers) on the left.
-Click Add Trigger on the bottom right. You can change the failure notification settings to immediately if you want or anything else, then click save once you're done.
+Now, we want to set up a trigger so it runs when the doc opens. Click the clock symbol (Triggers) on the left.
+Click Add Trigger on the bottom right and have it run on open. You can change the failure notification settings to immediately if you want or anything else, then click save once you're done.
  
 Finally, you can name the appscript at the top and SAVE before closing
 
