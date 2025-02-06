@@ -101,12 +101,6 @@ function refreshBodyImage(doc, imageID, targetAltText) {
             imageReplaced = true;
           }
         }
-
-        // POSITIONED IMAGES - WORK IN PROGRESS (GET ALT DESC NOT WORKING)
-        /*if (element.getType() === DocumentApp.ElementType.POSITIONED_IMAGE) {
-          if (altText === targetAltText) {
-          }
-        }*/
       }
     }
 
