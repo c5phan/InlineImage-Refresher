@@ -1,3 +1,5 @@
+// Make sure to name this appscript file AutomatedImageRefresher
+
 function onOpen(doc, startNum, endText, footer) {
   var sheet = SpreadsheetApp.openByUrl('/* sheet url */');  // master sheet of images
 
